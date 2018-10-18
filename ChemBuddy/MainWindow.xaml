@@ -13,7 +13,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!--Left sidebar for the menu items-->
+        <!--Left sidebar for menu items-->
         <StackPanel Background="#282828" Grid.Column="0">
             <Button Name="SearchButton" Click="SearchButton_Click" Margin="5" Padding="3" Background="#424242">
                 <Image Source="ToolbarButtons\magnifying-glass-6x.png" Stretch="Fill" Cursor="Hand"/>
