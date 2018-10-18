@@ -39,5 +39,25 @@ namespace ChemBuddy
         {
 
         }
+
+        private void HydrogenButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void HeliumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void LithiumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BerylliumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

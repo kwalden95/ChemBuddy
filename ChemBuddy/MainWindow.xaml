@@ -164,7 +164,21 @@
         <!--#endregion-->
             
             <!--#region Elements-->
+            <Button Name="HydrogenButton" Click="HydrogenButton_Click" Grid.Column="1" Grid.Row="1">
+                <Image Source="ElementIcons\icon_hydrogen.png" Stretch="Fill"/>
+            </Button>
             
+            <Button Name="HeliumButton" Click="HeliumButton_Click" Grid.Column="18" Grid.Row="1">
+                <Image Source="ElementIcons\icon_helium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="LithiumButton" Click="LithiumButton_Click" Grid.Column="1" Grid.Row="2">
+                <Image Source="ElementIcons\icon_lithium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="BerylliumButton" Click="BerylliumButton_Click" Grid.Column="2" Grid.Row="2">
+                <Image Source="ElementIcons\icon_beryllium.png" Stretch="Fill"/>
+            </Button>
             <!--#endregion-->
 
         </Grid>
