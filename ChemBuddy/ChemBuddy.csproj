@@ -106,7 +106,9 @@
   <ItemGroup>
     <Resource Include="ToolbarButtons\x-6x.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="ElementIcons\icon_niobium.PNG" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="ElementIcons\icon_57-71.PNG" />
     <Resource Include="ElementIcons\icon_89-103.PNG" />
@@ -176,7 +178,7 @@
     <Resource Include="ElementIcons\icon_neon.PNG" />
     <Resource Include="ElementIcons\icon_neptunium.PNG" />
     <Resource Include="ElementIcons\icon_nickel.PNG" />
-    <Resource Include="ElementIcons\icon_niobium.PNG" />
+    <Resource Include="ElementIcons\icon_nihonium.PNG" />
     <Resource Include="ElementIcons\icon_nitrogen.PNG" />
     <Resource Include="ElementIcons\icon_nobelium.PNG" />
     <Resource Include="ElementIcons\icon_osmium.PNG" />
@@ -226,7 +228,7 @@
     <Resource Include="ElementIcons\icon_xenon.PNG" />
     <Resource Include="ElementIcons\icon_ytterbium.PNG" />
     <Resource Include="ElementIcons\icon_yttrium.PNG" />
-    <Resource Include="ElementIcons\icon_zicronium.PNG" />
+    <Resource Include="ElementIcons\icon_zirconium.PNG" />
     <Resource Include="ElementIcons\icon_zinc.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -158,10 +158,7 @@
 
             <Rectangle Grid.Row="7" Grid.Column="0" Fill="#282828" Stroke="White"/>
             <TextBlock Text="7" Foreground="White" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="7"/>
-
-            <Rectangle Grid.Row="8" Grid.Column="0" Fill="#282828" Stroke="White"/>
-            <TextBlock Text="8" Foreground="White" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="8"/>
-        <!--#endregion-->
+            <!--#endregion-->
             
             <!--#region Elements-->
             <Button Name="HydrogenButton" Click="HydrogenButton_Click" Grid.Column="1" Grid.Row="1">
@@ -178,6 +175,472 @@
 
             <Button Name="BerylliumButton" Click="BerylliumButton_Click" Grid.Column="2" Grid.Row="2">
                 <Image Source="ElementIcons\icon_beryllium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="BoronButton" Click="BoronButton_Click" Grid.Column="13" Grid.Row="2">
+                <Image Source="ElementIcons\icon_boron.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="CarbonButton" Click="CarbonButton_Click" Grid.Column="14" Grid.Row="2">
+                <Image Source="ElementIcons\icon_carbon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="NitrogenButton" Click="NitrogenButton_Click" Grid.Column="15" Grid.Row="2">
+                <Image Source="ElementIcons\icon_nitrogen.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="OxygenButton" Click="OxygenButton_Click" Grid.Column="16" Grid.Row="2">
+                <Image Source="ElementIcons\icon_oxygen.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="FluorineButton" Click="FluorineButton_Click" Grid.Column="17" Grid.Row="2">
+                <Image Source="ElementIcons\icon_fluorine.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="NeonButton" Click="NeonButton_Click" Grid.Column="18" Grid.Row="2">
+                <Image Source="ElementIcons\icon_neon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="SodiumButton" Click="SodiumButton_Click" Grid.Column="1" Grid.Row="3">
+                <Image Source="ElementIcons\icon_sodium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="MagnesiumButton" Click="MagnesiumButton_Click" Grid.Column="2" Grid.Row="3">
+                <Image Source="ElementIcons\icon_magnesium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="AluminumButton" Click="AluminumButton_Click" Grid.Column="13" Grid.Row="3">
+                <Image Source="ElementIcons\icon_aluminum.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="SiliconButton" Click="SiliconButton_Click" Grid.Column="14" Grid.Row="3">
+                <Image Source="ElementIcons\icon_silicon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="PhosphorusButton" Click="PhosphorusButton_Click" Grid.Column="15" Grid.Row="3">
+                <Image Source="ElementIcons\icon_phosphorous.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="SulfurButton" Click="SulfurButton_Click" Grid.Column="16" Grid.Row="3">
+                <Image Source="ElementIcons\icon_sulfur.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="ChlorineButton" Click="ChlorineButton_Click" Grid.Column="17" Grid.Row="3">
+                <Image Source="ElementIcons\icon_chlorine.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="ArgonButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="PotassiumButton" Click="PotassiumButton_Click" Grid.Column="1" Grid.Row="4">
+                <Image Source="ElementIcons\icon_potassium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="CalciumButton" Click="CalciumButton_Click" Grid.Column="2" Grid.Row="4">
+                <Image Source="ElementIcons\icon_calcium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="ScandiumButton" Click="ScandiumButton_Click" Grid.Column="3" Grid.Row="4">
+                <Image Source="ElementIcons\icon_scandium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="TitaniumButton" Click="TitaniumButton_Click" Grid.Column="4" Grid.Row="4">
+                <Image Source="ElementIcons\icon_titanium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="VanadiumButton" Click="VanadiumButton_Click" Grid.Column="5" Grid.Row="4">
+                <Image Source="ElementIcons\icon_vanadium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="ChromiumButton" Click="ChromiumButton_Click" Grid.Column="6" Grid.Row="4">
+                <Image Source="ElementIcons\icon_chromium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="ManganeseButton" Click="ManganeseButton_Click" Grid.Column="7" Grid.Row="4">
+                <Image Source="ElementIcons\icon_manganese.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="IronButton" Click="IronButton_Click" Grid.Column="8" Grid.Row="4">
+                <Image Source="ElementIcons\icon_iron.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="CobaltButton" Click="CobaltButton_Click" Grid.Column="9" Grid.Row="4">
+                <Image Source="ElementIcons\icon_cobalt.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="NickelButton" Click="NickelButton_Click" Grid.Column="10" Grid.Row="4">
+                <Image Source="ElementIcons\icon_nickel.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="CopperButton" Click="CopperButton_Click" Grid.Column="11" Grid.Row="4">
+                <Image Source="ElementIcons\icon_copper.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="ZincButton" Click="ZincButton_Click" Grid.Column="12" Grid.Row="4">
+                <Image Source="ElementIcons\icon_zinc.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="GalliumButton" Click="GalliumButton_Click" Grid.Column="13" Grid.Row="4">
+                <Image Source="ElementIcons\icon_gallium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="GermaniumButton" Click="GermaniumButton_Click" Grid.Column="14" Grid.Row="4">
+                <Image Source="ElementIcons\icon_germanium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="ArsenicButton" Click="ArsenicButton_Click" Grid.Column="15" Grid.Row="4">
+                <Image Source="ElementIcons\icon_arsenic.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="SeleniumButton" Click="SeleniumButton_Click" Grid.Column="16" Grid.Row="4">
+                <Image Source="ElementIcons\icon_selenium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="BromineButton" Click="BromineButton_Click" Grid.Column="17" Grid.Row="4">
+                <Image Source="ElementIcons\icon_bromine.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="KryptonButton" Click="KryptonButton_Click" Grid.Column="18" Grid.Row="4">
+                <Image Source="ElementIcons\icon_krypton.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="RubidiumButton" Click="RubidiumButton_Click" Grid.Column="1" Grid.Row="5">
+                <Image Source="ElementIcons\icon_rubidium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="StrontiumButton" Click="StrontiumButton_Click" Grid.Column="2" Grid.Row="5">
+                <Image Source="ElementIcons\icon_strontium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="YttriumButton" Click="YttriumButton_Click" Grid.Column="3" Grid.Row="5">
+                <Image Source="ElementIcons\icon_yttrium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="ZirconiumButton" Click="ZirconiumButton_Click" Grid.Column="4" Grid.Row="5">
+                <Image Source="ElementIcons\icon_zirconium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="NiobiumButton" Click="NiobiumButton_Click" Grid.Column="5" Grid.Row="5">
+                <Image Source="ElementIcons\icon_niobium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="MolybdenumButton" Click="MolybdenumButton_Click" Grid.Column="6" Grid.Row="5">
+                <Image Source="ElementIcons\icon_molybdenum.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="TechnetiumButton" Click="TechnetiumButton_Click" Grid.Column="7" Grid.Row="5">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="RutheniumButton" Click="RutheniumButton_Click" Grid.Column="8" Grid.Row="5">
+                <Image Source="ElementIcons\icon_ruthenium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="RhodiumButton" Click="RhodiumButton_Click" Grid.Column="9" Grid.Row="5">
+                <Image Source="ElementIcons\icon_rhodium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="PalladiumButton" Click="PalladiumButton_Click" Grid.Column="10" Grid.Row="5">
+                <Image Source="ElementIcons\icon_palladium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="SilverButton" Click="SilverButton_Click" Grid.Column="11" Grid.Row="5">
+                <Image Source="ElementIcons\icon_silver.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="CadmiumButton" Click="CadmiumButton_Click" Grid.Column="12" Grid.Row="5">
+                <Image Source="ElementIcons\icon_cadmium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="IndiumButton" Click="IndiumButton_Click" Grid.Column="13" Grid.Row="5">
+                <Image Source="ElementIcons\icon_indium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="TinButton" Click="TinButton_Click" Grid.Column="14" Grid.Row="5">
+                <Image Source="ElementIcons\icon_tin.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="AntimonyButton" Click="AntimonyButton_Click" Grid.Column="15" Grid.Row="5">
+                <Image Source="ElementIcons\icon_antimony.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="TelluriumButton" Click="TelluriumButton_Click" Grid.Column="16" Grid.Row="5">
+                <Image Source="ElementIcons\icon_tellurium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="IodineButton" Click="IodineButton_Click" Grid.Column="17" Grid.Row="5">
+                <Image Source="ElementIcons\icon_iodine.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="XenonButton" Click="XenonButton_Click" Grid.Column="18" Grid.Row="5">
+                <Image Source="ElementIcons\icon_xenon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="CaesiumButton" Click="CaesiumButton_Click" Grid.Column="1" Grid.Row="6">
+                <Image Source="ElementIcons\icon_caesium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="BariumButton" Click="BariumButton_Click" Grid.Column="2" Grid.Row="6">
+                <Image Source="ElementIcons\icon_barium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="Num57_71Button" Grid.Column="3" Grid.Row="6">
+                <Image Source="ElementIcons\icon_57-71.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="HafniumButton" Click="HafniumButton_Click" Grid.Column="4" Grid.Row="6">
+                <Image Source="ElementIcons\icon_hafnium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="TantalumButton" Click="TantalumButton_Click" Grid.Column="5" Grid.Row="6">
+                <Image Source="ElementIcons\icon_tantalum.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="TungstenButton" Click="TungstenButton_Click" Grid.Column="6" Grid.Row="6">
+                <Image Source="ElementIcons\icon_tungsten.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="RheniumButton" Click="RheniumButton_Click" Grid.Column="7" Grid.Row="6">
+                <Image Source="ElementIcons\icon_rhenium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="OsmiumButton" Click="OsmiumButton_Click" Grid.Column="8" Grid.Row="6">
+                <Image Source="ElementIcons\icon_osmium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="IridiumButton" Click="IridiumButton_Click" Grid.Column="9" Grid.Row="6">
+                <Image Source="ElementIcons\icon_iridium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="PlatinumButton" Click="PlatinumButton_Click" Grid.Column="10" Grid.Row="6">
+                <Image Source="ElementIcons\icon_platinum.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="GoldButton" Click="GoldButton_Click" Grid.Column="11" Grid.Row="6">
+                <Image Source="ElementIcons\icon_gold.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="MercuryButton" Click="MercuryButton_Click" Grid.Column="12" Grid.Row="6">
+                <Image Source="ElementIcons\icon_mercury.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="ThalliumButton" Click="ThalliumButton_Click" Grid.Column="13" Grid.Row="6">
+                <Image Source="ElementIcons\icon_thallium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="LeadButton" Click="LeadButton_Click" Grid.Column="14" Grid.Row="6">
+                <Image Source="ElementIcons\icon_lead.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="BismuthButton" Click="BismuthButton_Click" Grid.Column="15" Grid.Row="6">
+                <Image Source="ElementIcons\icon_bismuth.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="PoloniumButton" Click="PoloniumButton_Click" Grid.Column="16" Grid.Row="6">
+                <Image Source="ElementIcons\icon_polonium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="AstatineButton" Click="AstatineButton_Click" Grid.Column="17" Grid.Row="6">
+                <Image Source="ElementIcons\icon_astatine.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="RadonButton" Click="RadonButton_Click" Grid.Column="18" Grid.Row="6">
+                <Image Source="ElementIcons\icon_radon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="FranciumButton" Click="FranciumButton_Click" Grid.Column="1" Grid.Row="7">
+                <Image Source="ElementIcons\icon_francium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="RadiumButton" Click="RadiumButton_Click" Grid.Column="2" Grid.Row="7">
+                <Image Source="ElementIcons\icon_radium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="Num89_103Button" Click="Num89_103Button_Click" Grid.Column="3" Grid.Row="7">
+                <Image Source="ElementIcons\icon_89-103.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="RutherfordiumButton" Click="RutherfordiumButton_Click" Grid.Column="4" Grid.Row="7">
+                <Image Source="ElementIcons\icon_rutherfordium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="DubniumButton" Click="DubniumButton_Click" Grid.Column="5" Grid.Row="7">
+                <Image Source="ElementIcons\icon_dubnium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="SeaborgiumButton" Click="SeaborgiumButton_Click" Grid.Column="6" Grid.Row="7">
+                <Image Source="ElementIcons\icon_seaborgium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="BohriumButton" Click="BohriumButton_Click" Grid.Column="7" Grid.Row="7">
+                <Image Source="ElementIcons\icon_bohrium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="HassiumButton" Click="HassiunButton_Click" Grid.Column="8" Grid.Row="7">
+                <Image Source="ElementIcons\icon_hassium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="MeitneriumButton" Click="MeitneriumButton_Click" Grid.Column="9" Grid.Row="7">
+                <Image Source="ElementIcons\icon_meitnerium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="DarmstadtiumButton" Click="DarmstadtiumButton_Click" Grid.Column="10" Grid.Row="7">
+                <Image Source="ElementIcons\icon_darmstadtium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="RoentgeniumButton" Click="RoentgeniumButton_Click" Grid.Column="11" Grid.Row="7">
+                <Image Source="ElementIcons\icon_roentgenium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="CoperniciumButton" Click="CoperniciumButton_Click" Grid.Column="12" Grid.Row="7">
+                <Image Source="ElementIcons\icon_copernicium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="NihoniumButton" Click="NihoniumButton_Click" Grid.Column="13" Grid.Row="7">
+                <Image Source="ElementIcons\icon_nihonium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="FleroviumButton" Click="FleroviumButton_Click" Grid.Column="14" Grid.Row="7">
+                <Image Source="ElementIcons\icon_flerovium.png" Stretch="Fill"/>
+            </Button>
+
+            <!--missing image-->
+            <Button Name="MoscoviumButton" Click="MoscoviumButton_Click" Grid.Column="15" Grid.Row="7">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="LivermoriumButton" Click="LivermoriumButton_Click" Grid.Column="16" Grid.Row="7">
+                <Image Source="ElementIcons\icon_livermorium.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="TennessineButton" Click="TennessineButton_Click" Grid.Column="17" Grid.Row="7">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <!--missing image-->
+            <Button Name="OganessonButton" Click="OganessonButton_Click" Grid.Column="18" Grid.Row="7">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="LanthanumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="CeriumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="PraseodymiumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="NeodymiumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="PromethiumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="SamariumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="EuropiumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="GadoliniumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="TerbiumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="DysprosiumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="HolmiumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="ErbiumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="ThuliumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="YtterbiumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="LutetiumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="ActiniumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="ThoriumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="ProtactiniumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="UraniumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="NeptuniumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="PlutoniumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="AmericiumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="CuriumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="BerkeliumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="CaliforniumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="EinsteiniumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="FermiumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="MendeleviumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="NobeliumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
+            </Button>
+
+            <Button Name="LawrenciumButton" Click="ArgonButton_Click" Grid.Column="18" Grid.Row="3">
+                <Image Source="ElementIcons\icon_argon.png" Stretch="Fill"/>
             </Button>
             <!--#endregion-->
 
