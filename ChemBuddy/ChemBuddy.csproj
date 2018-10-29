@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="ElementDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -62,6 +66,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Element.cs" />
+    <Compile Include="ElementDetails.xaml.cs">
+      <DependentUpon>ElementDetails.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -92,7 +100,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="beaker.png" />
@@ -230,6 +240,24 @@
     <Resource Include="ElementIcons\icon_yttrium.PNG" />
     <Resource Include="ElementIcons\icon_zirconium.PNG" />
     <Resource Include="ElementIcons\icon_zinc.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LewisStructures\lewis_hydrogen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ElementImages\hydrogen_image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LegendSquares\actinide.PNG" />
+    <Resource Include="LegendSquares\alkalimetal.PNG" />
+    <Resource Include="LegendSquares\alkalineearthmetal.PNG" />
+    <Resource Include="LegendSquares\halogen.PNG" />
+    <Resource Include="LegendSquares\lanthanide.PNG" />
+    <Resource Include="LegendSquares\metal.PNG" />
+    <Resource Include="LegendSquares\metalloid.PNG" />
+    <Resource Include="LegendSquares\noblegas.PNG" />
+    <Resource Include="LegendSquares\nonmetal.PNG" />
+    <Resource Include="LegendSquares\transitionmetal.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

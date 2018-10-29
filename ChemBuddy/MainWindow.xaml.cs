@@ -32,7 +32,58 @@ namespace ChemBuddy
 
         private void ToggleLegendButton_Click(object sender, RoutedEventArgs e)
         {
+            if (ActinideImage.Visibility == Visibility.Visible)
+                hideLegend();
+            else if (ActinideImage.Visibility == Visibility.Hidden)
+                showLegend();
+        }
 
+        private void showLegend()
+        {
+            ActinideImage.Visibility = Visibility.Visible;
+            ActinideTextBlock.Visibility = Visibility.Visible;
+            AlkaliMetalImage.Visibility = Visibility.Visible;
+            AlkaliMetalTextBlock.Visibility = Visibility.Visible;
+            AlkalineEarthMetalImage.Visibility = Visibility.Visible;
+            AlkalineEarthMetalTextBlock.Visibility = Visibility.Visible;
+            HalogenImage.Visibility = Visibility.Visible;
+            HalogenTextBlock.Visibility = Visibility.Visible;
+            LanthanideImage.Visibility = Visibility.Visible;
+            LanthanideTextBlock.Visibility = Visibility.Visible;
+            MetalImage.Visibility = Visibility.Visible;
+            MetalTextBlock.Visibility = Visibility.Visible;
+            MetalloidImage.Visibility = Visibility.Visible;
+            MetalloidTextBlock.Visibility = Visibility.Visible;
+            NobleGasImage.Visibility = Visibility.Visible;
+            NobleGasTextBlock.Visibility = Visibility.Visible;
+            NonmetalImage.Visibility = Visibility.Visible;
+            NonmetalTextBlock.Visibility = Visibility.Visible;
+            TransitionMetalImage.Visibility = Visibility.Visible;
+            TransitionMetalTextBlock.Visibility = Visibility.Visible;
+        }
+
+        private void hideLegend()
+        {
+            ActinideImage.Visibility = Visibility.Hidden;
+            ActinideTextBlock.Visibility = Visibility.Hidden;
+            AlkaliMetalImage.Visibility = Visibility.Hidden;
+            AlkaliMetalTextBlock.Visibility = Visibility.Hidden;
+            AlkalineEarthMetalImage.Visibility = Visibility.Hidden;
+            AlkalineEarthMetalTextBlock.Visibility = Visibility.Hidden;
+            HalogenImage.Visibility = Visibility.Hidden;
+            HalogenTextBlock.Visibility = Visibility.Hidden;
+            LanthanideImage.Visibility = Visibility.Hidden;
+            LanthanideTextBlock.Visibility = Visibility.Hidden;
+            MetalImage.Visibility = Visibility.Hidden;
+            MetalTextBlock.Visibility = Visibility.Hidden;
+            MetalloidImage.Visibility = Visibility.Hidden;
+            MetalloidTextBlock.Visibility = Visibility.Hidden;
+            NobleGasImage.Visibility = Visibility.Hidden;
+            NobleGasTextBlock.Visibility = Visibility.Hidden;
+            NonmetalImage.Visibility = Visibility.Hidden;
+            NonmetalTextBlock.Visibility = Visibility.Hidden;
+            TransitionMetalImage.Visibility = Visibility.Hidden;
+            TransitionMetalTextBlock.Visibility = Visibility.Hidden;
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
@@ -42,7 +93,7 @@ namespace ChemBuddy
 
         private void HydrogenButton_Click(object sender, RoutedEventArgs e)
         {
-
+           // Element e = new Element(n)
         }
 
         private void HeliumButton_Click(object sender, RoutedEventArgs e)
@@ -486,6 +537,181 @@ namespace ChemBuddy
         }
 
         private void GoldButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void UnuntriumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void UnunpentiumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void UnunseptiumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void UnunoctiumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void LanthanumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CeriumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PraseodymiumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NeodymiumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PromethiumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EuropiumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void GadoliniumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TerbiumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TeribiumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DysprosiumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void HolmiumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ErbiumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ThuliumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void YtterbiumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void LutetiumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ActiniumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ThoriumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ProtactiniumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void UraniumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NeptuniumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PlutoniumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AmericiumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CuriumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BerkeliumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CaliforniumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EinsteiniumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void FermiumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MendeleviumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NobeliumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void LawrenciumButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SamariumButton_Click(object sender, RoutedEventArgs e)
         {
 
         }
