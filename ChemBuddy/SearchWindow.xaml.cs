@@ -15,15 +15,13 @@ using System.Windows.Shapes;
 namespace ChemBuddy
 {
     /// <summary>
-    /// Interaction logic for ElementDetails.xaml
+    /// Interaction logic for SearchWindow.xaml
     /// </summary>
-    public partial class ElementDetails : Window
+    public partial class SearchWindow : Window
     {
-        public ElementDetails(Element e)
+        public SearchWindow()
         {
             InitializeComponent();
-            ElementNameValue.Text = e.name;
-            AtomicMassValue.Text = e.atomicMass.ToString();
         }
     }
 }

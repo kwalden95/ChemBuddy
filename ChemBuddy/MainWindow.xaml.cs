@@ -27,7 +27,9 @@ namespace ChemBuddy
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
-
+            SearchWindow sw = new SearchWindow();
+            sw.Owner = this;
+            sw.Show();
         }
 
         private void ToggleLegendButton_Click(object sender, RoutedEventArgs e)
@@ -88,12 +90,14 @@ namespace ChemBuddy
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
 
         private void HydrogenButton_Click(object sender, RoutedEventArgs e)
         {
-           // Element e = new Element(n)
+            Element ele = new Element("Hydrogen", "s", "c", "ec", "sp", 1.0f, 1, 1, 1, 1);
+            ElementDetails ed = new ElementDetails(ele);
+            ed.Show();
         }
 
         private void HeliumButton_Click(object sender, RoutedEventArgs e)

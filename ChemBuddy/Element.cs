@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace ChemBuddy
 {
-    class Element
+    public class Element
     {
         //element attributes
-        string name;
-        string symbol;
-        string category; //i.e. metal, noble gas, etc.
-        string electronConfig;
-        string standardPhase;
-        float atomicMass;
-        float boilingPoint;
-        float meltingPoint;
-        float density;
-        int atomicNumber;
+        public string name;
+        public string symbol;
+        public string category; //i.e. metal, noble gas, etc.
+        public string electronConfig;
+        public string standardPhase;
+        public float atomicMass;
+        public float boilingPoint;
+        public float meltingPoint;
+        public float density;
+        public int atomicNumber;
 
 
         //new constructor
