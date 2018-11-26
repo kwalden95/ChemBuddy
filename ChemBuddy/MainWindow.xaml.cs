@@ -102,7 +102,13 @@ namespace ChemBuddy
 
         private void HeliumButton_Click(object sender, RoutedEventArgs e)
         {
+            string message = "No element matching your search results exists.";
+            string caption = "Error";
+            MessageBoxButton buttons = MessageBoxButton.OK;
+            MessageBoxImage image = MessageBoxImage.Error;
 
+            // display messagebox
+            MessageBoxResult error = MessageBox.Show(message, caption, buttons, image);
         }
 
         private void LithiumButton_Click(object sender, RoutedEventArgs e)
