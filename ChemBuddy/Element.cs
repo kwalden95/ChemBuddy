@@ -14,15 +14,15 @@ namespace ChemBuddy
         public string category; //i.e. metal, noble gas, etc.
         public string electronConfig;
         public string standardPhase;
-        public float atomicMass;
-        public float boilingPoint;
-        public float meltingPoint;
-        public float density;
+        public double atomicMass;
+        public double boilingPoint;
+        public double meltingPoint;
+        public double density;
         public int atomicNumber;
 
 
         //new constructor
-        public Element(string n, string s, string c, string ec, string sp, float d, float am, float bp, float mp, int an)
+        public Element(string n, string s, string c, string ec, string sp, double d, double am, double bp, double mp, int an)
         {
             this.name = n;
             this.symbol = s;
@@ -34,6 +34,12 @@ namespace ChemBuddy
             this.boilingPoint = bp;
             this.meltingPoint = mp;
             this.atomicNumber = an;
+        }
+
+        public string DisplayElementInfo()
+        {
+            return "Name: " + name + " Symbol: " + symbol + " Category: " + category + " Electron config: " + electronConfig + " Standard phase: " + standardPhase + " Density: " + density + " Atomic mass: "
+                + atomicMass + " Boiling point: " + boilingPoint + " Melting point: " + meltingPoint + " Atomic number: " + atomicNumber;
         }
     }
 }

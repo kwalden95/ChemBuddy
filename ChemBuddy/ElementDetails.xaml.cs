@@ -22,8 +22,18 @@ namespace ChemBuddy
         public ElementDetails(Element e)
         {
             InitializeComponent();
+            this.Title = e.name + " Details";
+            ElementNameHeaderTextBlock.Text = e.name;
             ElementNameValue.Text = e.name;
             AtomicMassValue.Text = e.atomicMass.ToString();
+            BoilingPointValue.Text = e.boilingPoint.ToString();
+            MeltingPointValue.Text = e.meltingPoint.ToString();
+            DensityValue.Text = e.density.ToString();
+            AtomicNumberValue.Text = e.atomicMass.ToString();
+            ElectronConfigurationValue.Text = e.electronConfig;
+            CategoryValue.Text = e.category;
+            ChemicalSymbolValue.Text = e.symbol;
+            StandardPhaseValue.Text = e.standardPhase;
         }
     }
 }

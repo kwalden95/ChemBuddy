@@ -457,7 +457,7 @@
                 <Image Source="ElementIcons\icon_radium.png" Stretch="Fill"/>
             </Button>
 
-            <Button Name="Num89_103Button"  Cursor="Hand" Click="Num89_103Button_Click" Grid.Column="3" Grid.Row="7">
+            <Button Name="Num89_103Button" Click="Num89_103Button_Click" Grid.Column="3" Grid.Row="7">
                 <Image Source="ElementIcons\icon_89-103.png" Stretch="Fill"/>
             </Button>
 
@@ -645,7 +645,7 @@
 <!--#endregion-->
 
             <Image Name="ActinideImage" Source="LegendSquares\actinide.png" Grid.Column="8" Grid.Row="1" Stretch="Fill" Visibility="Hidden"/>
-            <TextBlock Name="ActinideTextBlock" Foreground="White" Text="Actinide" Grid.Column="8" Grid.Row="1" TextAlignment="Center" Visibility="Hidden" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <TextBlock Name="ActinideTextBlock" Foreground="White" Text="Lanthanide" Grid.Column="8" Grid.Row="1" TextAlignment="Center" Visibility="Hidden" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
             <Image Name="AlkaliMetalImage" Source="LegendSquares\alkalimetal.png" Grid.Column="8" Grid.Row="2" Stretch="Fill" Visibility="Hidden"/>
             <TextBlock Name="AlkaliMetalTextBlock" Foreground="White" Text="Alkali&#x0a;Metal" Grid.Column="8" Grid.Row="2" TextAlignment="Center" Visibility="Hidden" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
             <Image Name="AlkalineEarthMetalImage" Source="LegendSquares\alkalineearthmetal.png" Grid.Column="5" Grid.Row="1" Stretch="Fill" Visibility="Hidden"/>
@@ -653,7 +653,7 @@
             <Image Name="HalogenImage" Source="LegendSquares\halogen.png" Grid.Column="5" Grid.Row="2" Stretch="Fill" Visibility="Hidden"/>
             <TextBlock Name="HalogenTextBlock" Foreground="White" Text="Halogen" Grid.Column="5" Grid.Row="2" TextAlignment="Center" Visibility="Hidden" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Image Name="LanthanideImage" Source="LegendSquares\lanthanide.png" Grid.Column="6" Grid.Row="1" Stretch="Fill" Visibility="Hidden"/>
-            <TextBlock Name="LanthanideTextBlock" Foreground="White" Text="Lanthanide"  Grid.Column="6" Grid.Row="1" TextAlignment="Center" Visibility="Hidden" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Name="LanthanideTextBlock" Foreground="White" Text="Actinide"  Grid.Column="6" Grid.Row="1" TextAlignment="Center" Visibility="Hidden" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Image Name="MetalImage" Source="LegendSquares\metal.png" Grid.Column="6" Grid.Row="2" Stretch="Fill" Visibility="Hidden"/>
             <TextBlock Name="MetalTextBlock" Foreground="White" Text="Metal" Grid.Column="6" Grid.Row="2" TextAlignment="Center" Visibility="Hidden" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Image Name="MetalloidImage" Source="LegendSquares\metalloid.png" Grid.Column="7" Grid.Row="1" Stretch="Fill" Visibility="Hidden"/>

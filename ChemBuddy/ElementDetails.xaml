@@ -5,17 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChemBuddy"
         mc:Ignorable="d"
-        Title="ElementDetails" Height="400" Width="480"
-        Background="#424242">
+        Title="ElementDetails" Height="210" Width="480"
+        Background="#424242" WindowStartupLocation="CenterScreen">
     <Border BorderBrush="White" BorderThickness="1">
-    <StackPanel Margin="10">
-        <Grid>
+    <StackPanel Margin="5">
+            <TextBlock Name="ElementNameHeaderTextBlock" Text="Element name" Foreground="White" FontSize="18" TextAlignment="Center"/>
+            <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Image Source="LewisStructures\lewis_hydrogen.png" Stretch="Fill" Margin="0 0 0 10" Grid.Column="0"/>
-            <Image Source="ElementImages\hydrogen_image.jpg" Stretch="Fill" Margin="0 0 0 10" Grid.Column="1"/>
         </Grid>
         <Separator Foreground="White" Height="5"/>
         <Grid>
