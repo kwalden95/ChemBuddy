@@ -170,440 +170,488 @@ namespace ChemBuddy
             ed.Show();
         }
 
-        private void HydrogenButton_Click(object sender, RoutedEventArgs e)
+        private void AddMass(int atomicNum)
         {
-            DisplayElementDetails(1);
+            double previousMass = Convert.ToDouble(this.MolarMassSumTextBlock.Text);
+            double newMass = previousMass + GetMass(atomicNum);
+            this.MolarMassSumTextBlock.Text = newMass.ToString();
         }
 
+        private double GetMass(int atomicNum)
+        {
+            string ConString = ConfigurationManager.ConnectionStrings["ChemBuddy"].ConnectionString;
+            string CmdString = string.Empty;
+
+            //try
+            {
+                using (SqlConnection con = new SqlConnection(ConString))
+                {
+                    using (SqlCommand cmd = new SqlCommand("GET_ATOMIC_MASS", con))
+                    {
+                        con.Open();
+
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        SqlParameter atomicNumParameter = new SqlParameter("@ATOMIC_NUMBER", SqlDbType.VarChar)
+                        {
+                            Value = atomicNum
+                        };
+
+                        //add parameters to cmd
+                        cmd.Parameters.Add(atomicNumParameter);
+
+                        //execute
+                        double result = Convert.ToDouble(cmd.ExecuteScalar());
+                        con.Close();
+                        return result;
+                    }
+                }
+            }
+        }
+
+        private void HydrogenButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(MolarMassStackPanel.Visibility == Visibility.Visible)
+                AddMass(1);
+            
+            else
+                DisplayElementDetails(1);
+        }
+
+     
         private void HeliumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(2);
+            if (MolarMassStackPanel.Visibility == Visibility.Visible)
+                AddMass(2);
+
+            else
+                DisplayElementDetails(2);
         }
 
         private void LithiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(3);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(3); else DisplayElementDetails(3);
 
         }
 
         private void BerylliumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(4);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(4); else DisplayElementDetails(4);
 
         }
 
         private void BoronButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(5);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(5); else DisplayElementDetails(5);
 
         }
 
         private void CarbonButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(6);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(6); else DisplayElementDetails(6);
 
         }
 
         private void NitrogenButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(7);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(7); else DisplayElementDetails(7);
 
         }
 
         private void OxygenButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(8);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(8); else DisplayElementDetails(8);
 
         }
 
         private void FluorineButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(9);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(9); else DisplayElementDetails(9);
 
         }
 
         private void NeonButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(10);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(10); else DisplayElementDetails(10);
 
         }
 
         private void SodiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(11);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(11); else DisplayElementDetails(11);
 
         }
 
         private void MagnesiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(12);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(12); else DisplayElementDetails(12);
 
         }
 
         private void AluminumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(13);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(13); else DisplayElementDetails(13);
 
         }
 
         private void SiliconButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(14);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(14); else DisplayElementDetails(14);
 
         }
 
         private void PhosphorusButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(15);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(15); else DisplayElementDetails(15);
 
         }
 
         private void SulfurButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(16);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(16); else DisplayElementDetails(16);
 
         }
 
         private void ChlorineButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(17);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(17); else DisplayElementDetails(17);
 
         }
 
         private void ArgonButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(18);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(18); else DisplayElementDetails(18);
 
         }
 
         private void PotassiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(19);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(19); else DisplayElementDetails(19);
 
         }
 
         private void CalciumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(20);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(20); else DisplayElementDetails(20);
 
         }
 
         private void ScandiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(21);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(21); else DisplayElementDetails(21);
 
         }
 
         private void TitaniumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(22);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(22); else DisplayElementDetails(22);
 
         }
 
         private void VanadiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(23);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(23); else DisplayElementDetails(23);
 
         }
 
         private void ChromiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(24);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(24); else DisplayElementDetails(24);
 
         }
 
         private void ManganeseButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(25);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(25); else DisplayElementDetails(25);
 
         }
 
         private void IronButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(26);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(26); else DisplayElementDetails(26);
 
         }
 
         private void CobaltButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(27);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(27); else DisplayElementDetails(27);
 
         }
 
         private void NickelButton_Click(object sender, RoutedEventArgs e)
         {
 
-            DisplayElementDetails(28);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(28); else DisplayElementDetails(28);
         }
 
         private void CopperButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(29);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(29); else DisplayElementDetails(29);
 
         }
 
         private void ZincButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(30);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(30); else DisplayElementDetails(30);
 
         }
 
         private void GalliumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(31);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(31); else DisplayElementDetails(31);
 
         }
 
         private void GermaniumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(32);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(32); else DisplayElementDetails(32);
 
         }
 
         private void ArsenicButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(33);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(33); else DisplayElementDetails(33);
 
         }
 
         private void SeleniumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(34);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(34); else DisplayElementDetails(34);
 
         }
 
         private void BromineButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(35);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(35); else DisplayElementDetails(35);
 
         }
 
         private void KryptonButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(36);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(36); else DisplayElementDetails(36);
 
         }
 
         private void RubidiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(37);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(37); else DisplayElementDetails(37);
 
         }
 
         private void StrontiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(38);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(38); else DisplayElementDetails(38);
 
         }
 
         private void YttriumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(39);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(39); else DisplayElementDetails(39);
 
         }
 
         private void ZirconiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(40);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(40); else DisplayElementDetails(40);
 
         }
 
         private void NiobiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(41);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(41); else DisplayElementDetails(41);
 
         }
 
   
         private void MolybdenumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(42);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(42); else DisplayElementDetails(42);
 
         }
 
         private void TechnetiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(43);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(43); else DisplayElementDetails(43);
 
         }
 
         private void RutheniumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(44);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(44); else DisplayElementDetails(44);
 
         }
 
         private void RhodiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(45);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(45); else DisplayElementDetails(45);
 
         }
 
         private void PalladiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(46);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(46); else DisplayElementDetails(46);
 
         }
 
         private void SilverButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(47);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(47); else DisplayElementDetails(47);
 
         }
 
         private void CadmiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(48);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(48); else DisplayElementDetails(48);
 
         }
 
         private void IndiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(49);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(49); else DisplayElementDetails(49);
 
         }
 
         private void TinButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(50);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(50); else DisplayElementDetails(50);
 
         }
 
         private void AntimonyButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(51);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(51); else DisplayElementDetails(51);
 
         }
 
         private void TelluriumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(52);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(52); else DisplayElementDetails(52);
 
         }
 
         private void IodineButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(53);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(53); else DisplayElementDetails(53);
 
         }
 
         private void XenonButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(54);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(54); else DisplayElementDetails(54);
 
         }
 
         private void CaesiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(55);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(55); else DisplayElementDetails(55);
 
         }
 
         private void BariumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(56);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(56); else DisplayElementDetails(56);
 
         }
 
         private void HafniumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(72);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(72); else DisplayElementDetails(72);
 
         }
 
         private void TantalumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(73);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(73); else DisplayElementDetails(73);
 
         }
 
         private void TungstenButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(74);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(74); else DisplayElementDetails(74);
 
         }
 
         private void RheniumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(75);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(75); else DisplayElementDetails(75);
 
         }
 
         private void OsmiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(76);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(76); else DisplayElementDetails(76);
 
         }
 
         private void IridiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(77);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(77); else DisplayElementDetails(77);
 
         }
 
         private void PlatinumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(78);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(78); else DisplayElementDetails(78);
 
         }
 
         private void GoldButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(79);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(79); else DisplayElementDetails(79);
 
         }
 
         private void MercuryButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(80);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(80); else DisplayElementDetails(80);
 
         }
 
         private void ThalliumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(81);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(81); else DisplayElementDetails(81);
 
         }
 
         private void LeadButton_Click(object sender, RoutedEventArgs e)
         {
 
-            DisplayElementDetails(82);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(82); else DisplayElementDetails(82);
         }
 
         private void BismuthButton_Click(object sender, RoutedEventArgs e)
         {
 
-            DisplayElementDetails(83);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(83); else DisplayElementDetails(83);
         }
 
         private void PoloniumButton_Click(object sender, RoutedEventArgs e)
         {
 
-            DisplayElementDetails(84);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(84); else DisplayElementDetails(84);
         }
 
         private void AstatineButton_Click(object sender, RoutedEventArgs e)
         {
 
-            DisplayElementDetails(85);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(85); else DisplayElementDetails(85);
         }
 
         private void RadonButton_Click(object sender, RoutedEventArgs e)
         {
 
-            DisplayElementDetails(86);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(86); else DisplayElementDetails(86);
         }
 
         private void FranciumButton_Click(object sender, RoutedEventArgs e)
         {
 
-            DisplayElementDetails(87);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(87); else DisplayElementDetails(87);
         }
 
         private void RadiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(88);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(88); else DisplayElementDetails(88);
 
         }
 
@@ -614,297 +662,323 @@ namespace ChemBuddy
 
         private void RutherfordiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(104);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(104); else DisplayElementDetails(104);
 
         }
 
         private void DubniumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(105);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(105); else DisplayElementDetails(105);
 
         }
 
         private void SeaborgiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(106);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(106); else DisplayElementDetails(106);
 
         }
 
         private void BohriumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(107);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(107); else DisplayElementDetails(107);
 
         }
 
         private void HassiunButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(108);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(108); else DisplayElementDetails(108);
 
         }
 
         private void MeitneriumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(109);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(109); else DisplayElementDetails(109);
 
         }
 
         private void DarmstadtiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(110);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(110); else DisplayElementDetails(110);
 
         }
 
         private void RoentgeniumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(111);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(111); else DisplayElementDetails(111);
 
         }
 
         private void CoperniciumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(112);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(112); else DisplayElementDetails(112);
 
         }
 
         private void NihoniumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(113);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(113); else DisplayElementDetails(113);
 
         }
 
         private void FleroviumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(114);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(114); else DisplayElementDetails(114);
 
         }
 
         private void MoscoviumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(115);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(115); else DisplayElementDetails(115);
 
         }
 
         private void LivermoriumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(116);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(116); else DisplayElementDetails(116);
 
         }
 
         private void TennessineButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(117);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(117); else DisplayElementDetails(117);
 
         }
 
         private void OganessonButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(1);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(2); else DisplayElementDetails(1);
 
         }
 
         private void UnuntriumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(113);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(113); else DisplayElementDetails(113);
 
         }
 
         private void UnunpentiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(115);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(115); else DisplayElementDetails(115);
 
         }
 
         private void UnunseptiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(117);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(117); else DisplayElementDetails(117);
 
         }
 
         private void UnunoctiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(118);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(118); else DisplayElementDetails(118);
 
         }
 
         private void LanthanumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(57);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(57); else DisplayElementDetails(57);
 
         }
 
         private void CeriumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(58);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(58); else DisplayElementDetails(58);
 
         }
 
         private void PraseodymiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(59);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(59); else DisplayElementDetails(59);
 
         }
 
         private void NeodymiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(60);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(60); else DisplayElementDetails(60);
 
         }
 
         private void PromethiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(61);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(61); else DisplayElementDetails(61);
 
         }
 
         private void SamariumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(62);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(62); else DisplayElementDetails(62);
 
         }
 
         private void EuropiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(63);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(63); else DisplayElementDetails(63);
 
         }
 
         private void GadoliniumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(64);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(64); else DisplayElementDetails(64);
 
         }
 
         private void TeribiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(65);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(65); else DisplayElementDetails(65);
 
         }
 
         private void DysprosiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(66);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(66); else DisplayElementDetails(66);
 
         }
 
         private void HolmiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(67);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(67); else DisplayElementDetails(67);
 
         }
 
         private void ErbiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(68);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(68); else DisplayElementDetails(68);
 
         }
 
         private void ThuliumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(69);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(69); else DisplayElementDetails(69);
 
         }
 
         private void YtterbiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(70);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(70); else DisplayElementDetails(70);
 
         }
 
         private void LutetiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(71);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(71); else DisplayElementDetails(71);
 
         }
 
         private void ActiniumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(89);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(89); else DisplayElementDetails(89);
 
         }
 
         private void ThoriumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(90);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(90); else DisplayElementDetails(90);
 
         }
 
         private void ProtactiniumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(91);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(91); else DisplayElementDetails(91);
 
         }
 
         private void UraniumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(92);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(92); else DisplayElementDetails(92);
 
         }
 
         private void NeptuniumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(93);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(93); else DisplayElementDetails(93);
 
         }
 
         private void PlutoniumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(94);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(94); else DisplayElementDetails(94);
 
         }
 
         private void AmericiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(95);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(95); else DisplayElementDetails(95);
 
         }
 
         private void CuriumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(96);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(96); else DisplayElementDetails(96);
 
         }
 
         private void BerkeliumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(97);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(97); else DisplayElementDetails(97);
 
         }
 
         private void CaliforniumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(98);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(98); else DisplayElementDetails(98);
 
         }
 
         private void EinsteiniumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(99);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(99); else DisplayElementDetails(99);
 
         }
 
         private void FermiumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(100);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(100); else DisplayElementDetails(100);
 
         }
 
         private void MendeleviumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(101);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(101); else DisplayElementDetails(101);
 
         }
 
         private void NobeliumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(102);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(102); else DisplayElementDetails(102);
 
         }
 
         private void LawrenciumButton_Click(object sender, RoutedEventArgs e)
         {
-            DisplayElementDetails(103);
+                        if (MolarMassStackPanel.Visibility == Visibility.Visible) AddMass(103); else DisplayElementDetails(103);
 
         }
 
+        private void ListViewButton_Click(object sender, RoutedEventArgs e)
+        {
+            ListView lv = new ListView();
+            lv.Show();
+        }
+
+        private void CalculatorButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (MolarMassStackPanel.Visibility == Visibility.Hidden) {
+                MolarMassStackPanel.Visibility = Visibility.Visible;
+                MolarMassSumTextBlock.Visibility = Visibility.Visible;
+                ClearButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                MolarMassStackPanel.Visibility = Visibility.Hidden;
+                MolarMassSumTextBlock.Visibility = Visibility.Hidden;
+                ClearButton.Visibility = Visibility.Hidden;
+                MolarMassSumTextBlock.Text = "0.00";
+            }
+        }
+
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.MolarMassSumTextBlock.Text = "0.00";
+        }
     }
 }

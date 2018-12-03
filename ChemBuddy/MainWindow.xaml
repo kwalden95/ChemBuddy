@@ -24,11 +24,29 @@
                 </Button.ToolTip>
             </Button>
 
-            <Button Name="ToggleLegendButton"  Cursor="Hand" Click="ToggleLegendButton_Click" Margin="5" Padding="3" Background="#424242">
+            <Button Name="ListViewButton"  Cursor="Hand" Click="ListViewButton_Click" Margin="5" Padding="3" Background="#424242">
                 <Image Source="ToolbarButtons\list-6x.png" Stretch="Fill" Cursor="Hand"/>
                 <Button.ToolTip>
                     <ToolTip>
+                        <TextBlock Text="List view"/>
+                    </ToolTip>
+                </Button.ToolTip>
+            </Button>
+            
+            <Button Name="ToggleLegendButton"  Cursor="Hand" Click="ToggleLegendButton_Click" Margin="5" Padding="3" Background="#424242">
+                <Image Source="ToolbarButtons\book-6x.png" Stretch="Fill" Cursor="Hand"/>
+                <Button.ToolTip>
+                    <ToolTip>
                         <TextBlock Text="Show/Hide legend"/>
+                    </ToolTip>
+                </Button.ToolTip>
+            </Button>
+
+            <Button Name="CalculatorButton"  Cursor="Hand" Click="CalculatorButton_Click" Margin="5" Padding="3" Background="#424242">
+                <Image Source="ToolbarButtons\calculator-6x.png" Stretch="Fill" Cursor="Hand"/>
+                <Button.ToolTip>
+                    <ToolTip>
+                        <TextBlock Text="Molar mass calculator"/>
                     </ToolTip>
                 </Button.ToolTip>
             </Button>
@@ -664,6 +682,20 @@
             <TextBlock Name="NonmetalTextBlock" Foreground="White" Text="Nonmetal" Grid.Column="9" Grid.Row="1" TextAlignment="Center" Visibility="Hidden" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Image Name="TransitionMetalImage" Source="LegendSquares\transitionmetal.png" Grid.Column="9" Grid.Row="2" Stretch="Fill" Visibility="Hidden"/>
             <TextBlock Name="TransitionMetalTextBlock" Foreground="White" Text="Transition&#x0a;metal" Grid.Column="9" Grid.Row="2" TextAlignment="Center" Visibility="Hidden" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <StackPanel Name="MolarMassStackPanel" Grid.Column="7" Grid.Row="3" VerticalAlignment="Center" Visibility="Hidden">
+                <TextBlock Text="Molar mass" TextAlignment="Center" Foreground="White" FontSize="12"/>
+                <TextBlock Text="sum: " TextAlignment="Center" Foreground="White" FontSize="12"/>
+            </StackPanel>
+            <TextBlock Visibility="Hidden" VerticalAlignment="Center" Name="MolarMassSumTextBlock" Grid.Column="8" Grid.Row="3" TextAlignment="Center" Foreground="White" Text="0.00" FontSize="14"/>
+            <Button Visibility="Hidden" Grid.Column="9" Grid.Row="3" Name="ClearButton"  Cursor="Hand" Click="ClearButton_Click" Margin="15" Padding="3" Background="White">
+                <Image Source="ToolbarButtons\x-6x.png" Stretch="Fill" Cursor="Hand"/>
+                <Button.ToolTip>
+                    <ToolTip>
+                        <TextBlock Text="Clear"/>
+                    </ToolTip>
+                </Button.ToolTip>
+            </Button>
         </Grid>
     </Grid>
 </Window>
