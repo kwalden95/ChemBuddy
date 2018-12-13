@@ -29,7 +29,7 @@ namespace ChemBuddy
             BoilingPointValue.Text = e.boilingPoint.ToString();
             MeltingPointValue.Text = e.meltingPoint.ToString();
             DensityValue.Text = e.density.ToString();
-            AtomicNumberValue.Text = e.atomicMass.ToString();
+            AtomicNumberValue.Text = e.atomicNumber.ToString();
             ElectronConfigurationValue.Text = e.electronConfig;
             CategoryValue.Text = e.category;
             ChemicalSymbolValue.Text = e.symbol;
